@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#00d58a" />
+    <meta name="description" content="A simple yes or no, following weekday hours in GMT+8." />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <title>Is it TOU?</title>
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="icon" href="./icons/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+    <link rel="stylesheet" href="./style.css" />
+    <script type="module" src="./app.js"></script>
+  </head>
+  <body>
+    <main>
+      <h1 id="answer" role="status" aria-live="polite" aria-atomic="true">…</h1>
+      <noscript>This app needs JavaScript to check the time in GMT+8.</noscript>
+    </main>
+    <footer>
+      <div class="preview-controls" aria-label="Temporary color preview">
+        <button id="preview" type="button" hidden>Preview red</button>
+        <button id="live" type="button" hidden>Use current time</button>
+      </div>
+      <span id="time-label">GMT+8</span>
+    </footer>
+  </body>
+</html>
