@@ -1,4 +1,4 @@
-const CACHE = 'isittou-v11';
+const CACHE = 'isittou-v12';
 const ASSETS = [
   './', './index.html', './style.css', './app.js', './schedule.js',
   './manifest.webmanifest', './icons/icon.svg', './icons/icon-192.png',

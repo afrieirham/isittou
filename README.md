@@ -22,6 +22,4 @@ No environment variables or server are needed. See [Cloudflare's static HTML dep
 
 The service worker enables offline use after the first successful visit. Install through your browser's install action, or use Share → Add to Home Screen on iOS. Service workers require HTTPS or localhost.
 
-The temporary preview buttons let you check either color. “Use current time” returns to the live schedule; reloading also resets the preview.
-
 When changing cached files, increment the cache version in `sw.js`. Updates activate after the previous app's tabs are closed.

@@ -2,32 +2,14 @@ import { getStatus } from './schedule.js';
 
 const answer = document.querySelector('#answer');
 const theme = document.querySelector('meta[name="theme-color"]');
-const preview = document.querySelector('#preview');
-const live = document.querySelector('#live');
-const timeLabel = document.querySelector('#time-label');
-let previewState = null;
 
 function update() {
-  const state = previewState ?? getStatus();
-  preview.textContent = state === 'yes' ? 'Preview red' : 'Preview green';
-  live.hidden = previewState === null;
-  timeLabel.textContent = previewState === null ? 'GMT+8' : 'Color preview · GMT+8';
+  const state = getStatus();
   if (document.documentElement.dataset.state === state) return;
   document.documentElement.dataset.state = state;
   answer.textContent = state === 'yes' ? 'Yes' : 'No';
   theme.content = state === 'yes' ? '#00d58a' : '#ff527c';
 }
-
-preview.hidden = false;
-preview.addEventListener('click', () => {
-  previewState = document.documentElement.dataset.state === 'yes' ? 'no' : 'yes';
-  update();
-});
-live.addEventListener('click', () => {
-  previewState = null;
-  update();
-  preview.focus();
-});
 
 update();
 // Align to the clock so the answer changes at the minute boundary.

@@ -50,30 +50,5 @@ footer {
 }
 
 noscript { max-width: 30ch; line-height: 1.5; }
-.preview-controls {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin: 0 1rem 0.75rem;
-}
-
-button {
-  min-height: 44px;
-  padding: 0.6rem 1rem;
-  border: 1px solid currentColor;
-  border-radius: 999px;
-  background: transparent;
-  color: inherit;
-  font: inherit;
-  letter-spacing: normal;
-  cursor: pointer;
-}
-
-button:hover { background: rgb(255 255 255 / 18%); }
-button:active { background: rgb(255 255 255 / 30%); }
-button:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
-[hidden] { display: none !important; }
-
 ::selection { background: #022c22; color: #edf0ed; }
 html[data-state="no"] ::selection { background: #2d0808; color: #edf0ed; }
